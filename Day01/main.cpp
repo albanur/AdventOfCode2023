@@ -31,26 +31,27 @@ int main()
     char buffer[256];
     int first, last;
     int i, v;
-    map<string, int> digitMap;
 
-    digitMap["1"] = 1;
-    digitMap["2"] = 2;
-    digitMap["3"] = 3;
-    digitMap["4"] = 4;
-    digitMap["5"] = 5;
-    digitMap["6"] = 6;
-    digitMap["7"] = 7;
-    digitMap["8"] = 8;
-    digitMap["9"] = 9;
-    digitMap["one"] = 1;
-    digitMap["two"] = 2;
-    digitMap["three"] = 3;
-    digitMap["four"] = 4;
-    digitMap["five"] = 5;
-    digitMap["six"] = 6;
-    digitMap["seven"] = 7;
-    digitMap["eight"] = 8;
-    digitMap["nine"] = 9;
+    map<string, int> digitMap = {
+        { "1", 1 },
+        { "2", 2 },
+        { "3", 3 },
+        { "4", 4 },
+        { "5", 5 },
+        { "6", 6 },
+        { "7", 7 },
+        { "8", 8 },
+        { "9", 9 },
+        { "one", 1 },
+        { "two", 2 },
+        { "three", 3 },
+        { "four", 4 },
+        { "five", 5 },
+        { "six", 6 },
+        { "seven", 7 },
+        { "eight", 8 },
+        { "nine", 9 }
+    };
 
     while(fgets(buffer, 256, stdin) != NULL)
     {
@@ -72,7 +73,6 @@ int main()
                 i++;
             }
 
-            //printf("%i\n", 10 * first + last);
             sum += 10 * first + last;
         }
     }

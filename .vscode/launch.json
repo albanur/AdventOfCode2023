@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "C/C++: g++.exe build and debug active file",
+            "name": "[Windows] C/C++: g++.exe build and debug active file",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -24,8 +24,22 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++.exe build active file"
-        }
+            "preLaunchTask": "[Windows] C/C++: g++.exe build active file"
+        },
+
+        {
+            "name": "[MacOS] (lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "args": ["${fileDirname}/input.in"],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "[MacOS] C/C++: g++ build active file",
+        },
     ],
     "version": "2.0.0"
 }

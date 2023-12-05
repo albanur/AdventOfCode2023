@@ -203,8 +203,13 @@ private:
     }
 };
 
-int main()
+int main(int argc, char *argv[])
 {
+    if(argc > 1)
+    {
+        freopen(argv[1], "r", stdin);
+    }
+
     int64_t min = INT64_MAX;
     int64_t minRange = INT64_MAX;
     char buffer[1024];
@@ -266,6 +271,11 @@ int main()
 
     printf("%lld\n", min);
     printf("%lld\n", minRange);
+
+    if(argc > 1)
+    {
+        fclose(stdin);
+    }
 
     return 0;
 }
